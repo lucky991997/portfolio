@@ -67,9 +67,11 @@ a {
     border-radius: 0.4rem;
     cursor: pointer;
     border: 1px solid $color-primary;
+    box-shadow: 0;
     transition: $transition;
     &:hover{
         background-color: $color-white;
+        box-shadow: 0px 0px 20px #fff;
         color: $color-bg;
         border-color: transparent;
     }

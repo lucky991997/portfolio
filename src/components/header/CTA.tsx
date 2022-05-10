@@ -6,7 +6,7 @@ const CTA = () => {
                 className='btn'
                 href="../../../public/assets/TRAN_QUOC_TUAN_CV.pdf"
                 download>
-                Download CV
+                Download My Resume
             </a>
             <a 
             className='btn btn-primary'

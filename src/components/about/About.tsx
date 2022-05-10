@@ -18,26 +18,35 @@ const About = () => {
         <div className="about__content">
           <div className="about__cards">
             <article className="about__card">
-              <FaAward className="about-icon"/>
+              <FaAward className="about-icon" />
               <h5>Experience</h5>
               <small>3 month Working</small>
             </article>
             <article className="about__card">
-              <FiUsers className="about-icon"/>
+              <FiUsers className="about-icon" />
               <h5>Client</h5>
               <small>200+ Worldwide</small>
             </article>
             <article className="about__card">
-              <VscFolderLibrary className="about-icon"/>
+              <VscFolderLibrary className="about-icon" />
               <h5>Projects </h5>
               <small>3 Project Completed</small>
             </article>
           </div>
-          <p>
-            aljcfajdsfcajcf;acfacfascf
+          <p style={{color: 'white'}}>
+            Mình là Tuấn! Mình là Front-developers. Tuấn tốt nghiệp trường cao đẳng FPT Aptect chuyên ngành Thiết Kế website.
+            <br />
+            Những người bạn của thường nhận xét về mình: làm việc nhóm tốt và ham học hỏi những cái mới.
+            <br />
+
+            Mình thích chơi thể thao, nghe nhạc khi làm code, đọc sách và chơi game những lúc rỗi,...
           </p>
-          <a href="#contact" className="btn btn-primary">
-            Pls contact me
+
+          <a
+            className='btn btn-primary'
+            href="../../../public/assets/TRAN_QUOC_TUAN_CV.pdf"
+            download>
+            Download My Resume
           </a>
         </div>
       </div>

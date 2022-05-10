@@ -78,8 +78,18 @@
     }
     &__me {
       width: 50%;
-      margin: 2rem atuto 4rem;
-      transform: translateX(50%);
+      position: relative;
+      margin: 2rem auto 4rem ;
+      &-image {
+        transform: rotate(10deg);
+        transition: $transition;
+        img {
+          border-radius: 10px;
+        }
+        :hover{
+          transform: rotate(0);
+        }
+      }
     }
     &__content {
       margin: 1rem 0 1.5rem;
