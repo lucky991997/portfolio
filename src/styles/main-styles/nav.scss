@@ -1,0 +1,33 @@
+@use '../index.scss' as *;
+
+nav {
+    
+    background: rgba(0, 0, 0, 0.3);
+    width: max-content;
+    
+    z-index: 2;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%); 
+    bottom: 2rem;
+    display:flex;
+    border-radius:3rem;
+    padding: 0.7rem 1.7rem;
+
+    a {
+        @include flex(flex-start, flex-start);
+        background: transparent;
+        padding: 0.9rem;
+        border-radius: 50%;
+        font-size: 1.1em;
+        color: $color-light;
+        &:hover {
+            background: rgba(0,0,0,0.4);
+        }
+    }
+}
+.active {
+    background: $color-primary;
+    color: $color-bg;
+}

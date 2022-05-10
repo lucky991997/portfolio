@@ -1,0 +1,102 @@
+@use "../index.scss" as *;
+
+.container.testmonials {
+  &__container {
+    width: 40%;
+    padding-bottom: 3.5rem;
+  }
+}
+.project {
+  &__image {
+    width: 50%;
+    overflow: hidden;
+    border: 0.4rem solid $color-primary-variant;
+    img {
+      height: 100px;
+    }
+  }
+  &__description {
+    text-align: left;
+    color: $color-light;
+    display: block;
+  }
+  &__link {
+    @include flex(center, flex-start);
+    transition: $transition;
+    &-icon {
+      margin-top: 10px;
+    }
+    &-icon:nth-child(2) {
+      margin-left: -10px;
+    }
+  }
+}
+.testmonial {
+  @include flex(flex-start, flex-start);
+  gap: 1rem;
+  background: $color-bg-variant;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  user-select: none;
+  min-height: 150px;
+  h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  h4 {
+    text-align: left;
+  }
+  h3 {
+    margin-top: 6px;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container.testmonials {
+    &__container {
+      width: 60%;
+    }
+  }
+  .project {
+    &__description {
+      width: $container-width-sm;
+    }
+
+    &__image {
+      width: 100%;
+      img {
+        height: 160px;
+      }
+    }
+  }
+  .testmonial {
+    flex-direction: column;
+    h4 {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container.testmonials {
+    &__container {
+      width: $container-width-sm;
+    }
+  }
+  .project {
+    &__description {
+      width: $container-width-sm;
+    }
+
+    &__image {
+      width: 100%;
+      img {
+        height: 160px;
+      }
+    }
+  }
+  .testmonial {
+    flex-direction: column;
+  }
+}

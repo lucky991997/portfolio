@@ -1,0 +1,108 @@
+@use "../index.scss" as *;
+
+.about {
+  &__container {
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 10%;
+  }
+  &__me {
+    width: 100%;
+    background: $bg-main;
+    border-radius: 10px;
+    transition: $transition;
+    // transform: rotate(-10deg);
+    &-image {
+      transition: $transition;
+
+      transform: rotate(-10deg);
+      img {
+        border-radius: 10px;
+        transition: $transition;
+
+        &:hover {
+          border-radius: 50%;
+        }
+      }
+      &:hover {
+        transform: scale(1);
+        border-radius: 50%;
+      }
+    }
+    &:hover {
+      transform: rotate(0);
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  &__card {
+    background: $color-bg-variant;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: $transition;
+    &:hover {
+      background: transparent;
+      border-color: $color-primary-variant;
+    }
+    h5 {
+      font-size: 0.9rem;
+    }
+    small {
+      font-size: 0.7em;
+      color: $color-light;
+    }
+  }
+  &__content {
+    p {
+      margin: 2rem 0 2.6rem;
+      color: $color-light;
+    }
+  }
+  &__icon {
+    color: $color-primary;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about {
+    &__container {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    &__me {
+      width: 50%;
+      margin: 2rem atuto 4rem;
+      transform: translateX(50%);
+    }
+    &__content {
+      margin: 1rem 0 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    &__me {
+      width: 65%;
+      margin: 0 auto 3rem;
+      transform: translateX(0);
+    }
+    &__cards {
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    &__content {
+      text-align: center;
+      p {
+        margin: 1.5rem 0;
+      }
+    }
+  }
+}

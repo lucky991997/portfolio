@@ -1,0 +1,109 @@
+@use "./index.scss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+body {
+  font-family: "roboto", sans-serif;
+  background: $color-bg;
+  color: $txt-white;
+  line-height: 1.7;
+
+}
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+// styles
+
+.container {
+    width: $container-width-lg;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 500;
+}
+h1{ 
+    font-size: 2.5rem;
+}
+section {
+    margin-top: 8rem;
+}
+section > h2, section > h5 {
+    text-align: center;
+    color: $txt-black;
+}
+section > h2 {
+    color: $txt-white;
+    margin-bottom: 3rem;
+}
+.txt-light{
+    color: $color-light;
+}
+a {
+    color: $color-primary; 
+    transition: $transition;
+    &:hover {
+        color: $txt-white;
+    }
+}
+
+.btn {
+    width: max-content;
+    display: inline-block;
+    color: $color-primary;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid $color-primary;
+    transition: $transition;
+    &:hover{
+        background-color: $color-white;
+        color: $color-bg;
+        border-color: transparent;
+    }
+}
+.btn-primary {
+    background-color: $color-primary;
+    color: $color-bg;
+}
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+// media queries medium
+
+@media screen and (max-width: 1024px) {
+    .container{ 
+        width: $container-width-md;
+    }
+    
+    section {
+        margin-top: 6rem;
+    }
+    
+}
+// media queries small
+
+@media screen and (max-width: 600px) {
+    .container{ 
+        width: $container-width-sm;
+    }
+    
+    section > h2 {
+        margin-bottom: 2rem;
+    }
+
+}

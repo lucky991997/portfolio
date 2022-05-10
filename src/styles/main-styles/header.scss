@@ -1,0 +1,94 @@
+@use "../index.scss" as *;
+
+header {
+  height: 110vh;
+  padding-top: 7rem;
+  overflow: hidden;
+}
+.header {
+  &__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+  }
+
+  //socials
+  &__socials {
+    @include flex(center, flex-start);
+    gap: 0.8rem;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+    &::after {
+      content: "";
+      width: 1px;
+      height: 2rem;
+      background: $color-primary;
+    }
+    a {
+      transform: scale(1);
+      transition: $transition;
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+  //avt
+  &__avt {
+    width: 296px;
+    height: 336px;
+    left: calc(50% - 11rem);
+    margin-top: 4rem;
+    position: absolute;
+    margin-left: 40px;
+    img {
+      border-radius: 24px;
+    }
+  }
+}
+// cta h
+.cta {
+  @include flex(flex-start, center);
+  margin-top: 2.5rem;
+  gap: 1.2rem;
+}
+//scroll__down
+.scroll__down {
+  position: absolute;
+  right: -2.3rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 400;
+  font-size: 1rem;
+  transition: $transition;
+  &:hover {
+    transform: rotate(0);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    height: 68vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    height: 110vh;
+    &__socials {
+      display: none;
+    }
+  }
+  .header {
+    &__socials {
+      display: none;
+    }
+    &__avt {
+      margin-left: 28px;
+    }
+  }
+  .scroll__down {
+    display: none;
+  }
+}
