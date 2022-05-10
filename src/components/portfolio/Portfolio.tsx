@@ -24,7 +24,14 @@ const Portfolio = () => {
   return (
     <section id="services">
       <h5>My Recent Work</h5>
-      <h2>Portfolio</h2>
+      <h2>Portfolio 
+        <br/>
+        Đây là những sản phẩm làm được trong quá trình học tập và thực tập
+
+      </h2>
+
+
+
       <div className="container portfolio__container">
         {
           data.map((item, index) => (

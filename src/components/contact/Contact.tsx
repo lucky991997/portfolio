@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
 import { MdOutlineEmail } from 'react-icons/md'
 import { RiMessengerLine } from 'react-icons/ri'
@@ -8,7 +8,15 @@ import emailjs from 'emailjs-com';
 import '../../styles/main-styles/contact.scss'
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
-  const ms = 5000;
+
+  const [value, setValue] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  })
+
+  const ms = 2000;
   const sendEmail = (e: any) => {
     e.preventDefault();
     //@ts-ignore
@@ -19,12 +27,28 @@ const Contact = () => {
         console.log(error.text);
       });
     setTimeout(() => { e.target.reset() }, ms)
+
   };
   const handleContactForm = () => {
-    setTimeout(() => {
-      alert('Contact Form successfully!!!! ')
-    },ms)
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (value.email !== '' && value.name !== '' && value.phone !== '' && value.message !== '') {
+      if (regex.test(value.email)) {
+        setTimeout(() => {
+
+          alert('Contact Form successfully!!!! ')
+        }, ms)
+      } else {
+        alert('pls enter email ')
+
+      }
+
+
+
+    } else {
+      alert('pls enter full field ')
+    }
   }
+
   return (
     <section id="contact">
       <h5>Get In Touch</h5>
@@ -53,13 +77,36 @@ const Contact = () => {
         {/* End OF CONTACT OPTION */}
 
         <form ref={formRef} onSubmit={sendEmail}>
-          <input type="text" name='name' placeholder="Your Full name" required />
-          <input type="email" name='email' placeholder="Your email" required />
-          <textarea name='message' rows={7} placeholder="Your message" required />
+          <input
+            type="text"
+            name='name'
+            placeholder="Your Full name" required
+            onChange={(e) => setValue({ ...value, name: e.target.value })} />
+
+          <input
+            type="email"
+            name='email'
+            placeholder="Your email"
+            required
+            onChange={(e) => setValue({ ...value, email: e.target.value })} />
+
+          <input
+            type="text"
+            name='phone'
+            placeholder="Your Phone number"
+            required
+            onChange={(e) => setValue({ ...value, phone: e.target.value })} />
+
+          <textarea
+            name='message'
+            rows={7}
+            placeholder="Your message"
+            required
+            onChange={(e) => setValue({ ...value, message: e.target.value })} />
           <button
             type="submit"
             className="btn btn-primary"
-          onClick = {() => handleContactForm()}
+            onClick={() => handleContactForm()}
           >Send Message</button>
         </form>
 
