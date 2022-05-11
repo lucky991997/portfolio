@@ -1,7 +1,9 @@
 import React from 'react'
 import { FaAward } from 'react-icons/fa'
-import { FiUsers } from 'react-icons/fi'
+import { GoPrimitiveDot } from 'react-icons/go'
 import { VscFolderLibrary } from 'react-icons/vsc'
+import { AiOutlineMinus } from 'react-icons/ai'
+
 import '../../styles/main-styles/about.scss'
 
 const About = () => {
@@ -22,30 +24,44 @@ const About = () => {
               <h5>Experience</h5>
               <small>3 month Working</small>
             </article>
-            <article className="about__card">
-              <FiUsers className="about-icon" />
-              <h5>Client</h5>
-              <small>200+ Worldwide</small>
-            </article>
+
             <article className="about__card">
               <VscFolderLibrary className="about-icon" />
               <h5>Projects </h5>
               <small>3 Project Completed</small>
             </article>
           </div>
-          <p style={{color: 'white'}}>
-            Mình là Tuấn! Mình là Front-developers. Tuấn tốt nghiệp trường cao đẳng FPT Aptect chuyên ngành Thiết Kế website.
-            <br />
-            Những người bạn của thường nhận xét về mình: làm việc nhóm tốt và ham học hỏi những cái mới.
-            <br />
+          <p style={{ color: 'white' }}>
+            <GoPrimitiveDot style={{ marginRight: '6px' }} className="txt-light" />
+            Purpose
+            <div style={{ display: 'flex', marginLeft: '20px', marginTop: '10px' }}>
+              <div>
 
-            Mình thích chơi thể thao, nghe nhạc khi làm code, đọc sách và chơi game những lúc rỗi,...
+                <AiOutlineMinus className="txt-light" style={{ marginRight: '6px', fontSize: '14px' }} />
+              </div>
+              
+              <h5>
+                Short-term: looking for a job that matches your career development orientation.
+                Have the opportunity to learn, practice, and accumulate knowledge and experience on the front-end.
+              </h5>
+            </div>
+            <div style={{ display: 'flex', marginLeft: '20px', marginTop: '10px' }}>
+              <div>
+
+                <AiOutlineMinus className="txt-light" style={{ marginRight: '6px', fontSize: '14px' }} />
+              </div>
+              <h5>
+                Long-term: Have solid knowledge and skills in the field of full-stack development. Looking for career advancement opportunities
+              </h5>
+            </div>
+
           </p>
 
           <a
             className='btn btn-primary'
-            href="../../../public/assets/TRAN_QUOC_TUAN_CV.pdf"
-            download>
+            href="./assest/TRAN_QUOC_TUAN_CV (2).pdf"
+            download
+          >
             Download My Resume
           </a>
         </div>

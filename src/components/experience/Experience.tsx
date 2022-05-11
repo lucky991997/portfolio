@@ -12,7 +12,7 @@ const Experience = () => {
       content: 'Knowledged',
     },
     {
-      name: 'Javascript',
+      name: 'JavaScript',
       content: 'Knowledged',
     },
     {
@@ -20,12 +20,26 @@ const Experience = () => {
       content: 'Knowledged',
     },
     {
-      name: 'ReactJs',
+      name: 'React Js',
       content: 'Knowledged',
     },
     {
-      name: 'Typescript',
+      name: 'TypeScript',
       content: 'Knowledged',
+    },
+  ]
+  const experiences1 = [
+    {
+      name: 'Proficient in reading and understanding English books',
+    },
+    {
+      name: 'Reading material about new technologies',
+    },
+    {
+      name: 'Time management and Logical thinking skills',
+    },
+    {
+      name: 'Ability to self-study and research on internet',
     },
   ]
   return (
@@ -33,11 +47,11 @@ const Experience = () => {
       id="experience"
     >
       <h5>What skills I Have</h5>
-      <h2>My Experience</h2>
+      <h2>My Skills</h2>
 
       <div className="container experience__container">
         <div className="experience__frontend">
-          <h3>Frontend Development</h3>
+          <h3>Technical Skills</h3>
           <div className="experience__content">
             {
               experiences.map((item, index) => (
@@ -48,6 +62,22 @@ const Experience = () => {
 
                     <h4>{item.name}</h4>
                     <small className="text-light">{item.content}</small>
+                  </div>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+        <div className="experience__soft">
+          <h3>Soft Skills</h3>
+          <div className="experience__soft-content">
+            {
+              experiences1.map((item, index) => (
+                <article key={index} className="experience__soft-details">
+
+                  <AiFillCheckCircle className="experience__soft-details-icon" />
+                  <div>
+                    <h4>{item.name}</h4>
                   </div>
                 </article>
               ))

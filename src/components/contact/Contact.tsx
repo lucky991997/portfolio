@@ -2,7 +2,8 @@ import React, { useRef, useState } from 'react'
 
 import { MdOutlineEmail } from 'react-icons/md'
 import { RiMessengerLine } from 'react-icons/ri'
-import { BsWhatsapp } from 'react-icons/bs'
+import { BsFillTelephoneFill } from 'react-icons/bs'
+
 import emailjs from 'emailjs-com';
 
 import '../../styles/main-styles/contact.scss'
@@ -54,25 +55,18 @@ const Contact = () => {
       <h5>Get In Touch</h5>
       <h2>ConTact Me</h2>
       <div className="container contact__container">
-        <div className="contact__options">
+        <div className="contact__options" >
           <article className="contact__option">
             <MdOutlineEmail className="contact__option-icon" />
             <h4>Email</h4>
             <h5>quoctuan090997@gmail.com</h5>
-            <a href="mailto:quoctuan090997@gmail.com" >Send a message</a>
           </article>
           <article className="contact__option">
-            <RiMessengerLine className="contact__option-icon" />
-            <h4>Messenger</h4>
-            <h5>Tuấn Trần</h5>
-            <a href="https://m.me/t" >Send a message</a>
-          </article>
-          <article className="contact__option">
-            <BsWhatsapp className="contact__option-icon" />
-            <h4>whatsApp</h4>
+            <BsFillTelephoneFill className="contact__option-icon" />
+            <h4>Phone number</h4>
             <h5>0865992248</h5>
-            <a href="https://api.whatspp.com/send?phone+0865992248" >Send a message</a>
           </article>
+       
         </div>
         {/* End OF CONTACT OPTION */}
 

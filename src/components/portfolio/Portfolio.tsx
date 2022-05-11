@@ -25,9 +25,7 @@ const Portfolio = () => {
     <section id="services">
       <h5>My Recent Work</h5>
       <h2>Portfolio 
-        <br/>
-        Đây là những sản phẩm làm được trong quá trình học tập và thực tập
-
+      
       </h2>
 
 

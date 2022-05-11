@@ -7,6 +7,7 @@
     gap: 10%;
   }
   &__me {
+    height: 434px;
     width: 100%;
     background: $bg-main;
     border-radius: 10px;
@@ -35,7 +36,7 @@
   }
   &__cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
   &__card {
@@ -76,17 +77,23 @@
       grid-template-columns: 1fr;
       gap: 0;
     }
+    &__cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
     &__me {
+      height: 406px;
       width: 50%;
       position: relative;
-      margin: 2rem auto 4rem ;
+      margin: 2rem auto 4rem;
       &-image {
         transform: rotate(10deg);
         transition: $transition;
         img {
           border-radius: 10px;
         }
-        :hover{
+        :hover {
           transform: rotate(0);
         }
       }
@@ -100,6 +107,7 @@
 @media screen and (max-width: 600px) {
   .about {
     &__me {
+      height: 256px;
       width: 65%;
       margin: 0 auto 3rem;
       transform: translateX(0);
@@ -109,7 +117,10 @@
       gap: 1rem;
     }
     &__content {
-      text-align: center;
+      text-align: left;
+      a {
+        transform: translateX(32%);
+      }
       p {
         margin: 1.5rem 0;
       }

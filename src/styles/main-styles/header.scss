@@ -26,6 +26,9 @@ header {
       height: 2rem;
       background: $color-primary;
     }
+    svg {
+      font-size: 18px;
+    }
     a {
       transform: scale(1);
       transition: $transition;
@@ -90,5 +93,10 @@ header {
   }
   .scroll__down {
     display: none;
+  }
+  .cta {
+    a{
+      padding: 0.75rem 0.5rem;
+    }
   }
 }
